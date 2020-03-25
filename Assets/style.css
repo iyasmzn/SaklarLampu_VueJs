@@ -1,0 +1,79 @@
+html,body {
+	width: 100%;height: 100%;
+	overflow: hidden;
+	margin: 0;padding: 0;
+}
+#App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+p {
+	font-family: sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 20px 0;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 5px;
+	font-size: 20px;
+	color: #59595b;
+}
+p span {
+	display: block;
+	font-size: 40px;
+}
+.yellow { 
+	background-color: #f4d242; 
+	color: white;
+}
+.red { 
+	background-color: tomato; 
+	color: white;
+}
+
+[class*='-bg'] {
+	background-position: center;
+	background-size: cover;
+}
+.yellow-bg { 
+	background-image: url('http://getwallpapers.com/wallpaper/full/1/0/f/973036-yellow-background-images-1920x1080-download.jpg'); 
+}
+.red-bg { background-image: url('../Assets/images/bg-red.jpg'); }
+
+.black { background: black; }
+.lampu-container {
+	padding: 50px;
+	padding-bottom: 0px;
+	margin: 20px;	
+	margin-right: 0px;
+	border: 7px solid #59595b;
+	box-shadow: 27px 20px 30px black;
+	background-image: url('../Assets/images/white-wall.jfif');
+	background-size: cover;
+	background-position: center;
+}
+[class*='lampu'] {
+	width: 200px;
+}
+.active {
+	display: block;
+}
+.diactive {
+	display: none;
+}
+.butt {
+	padding: 100px 30px;
+	border: 7px solid #59595b;
+	border-left: 7px solid #c7c2bc;
+	background-image: url('../Assets/images/white-wall.jfif');
+	background-size: cover;
+	background-position: center;
+	transform: translateX(-7px);
+	box-shadow: 27px 20px 30px black;
+}
+.buttInn:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS | Lampu</title>
+
+	<!-- FontsGoogle -->
+	<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet"> 
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./Assets/style.css">
+
+</head>
+<body>
+	<div id="App" :class="bool ? 'yellow-bg' : 'red-bg' ">
+		
+		<!-- Lamp img -->
+		<span class="lampu-container">
+			<img class="lampu-hidup" :src="bool ? imgSrc1 : imgSrc2">			
+			<p>Pas Otak lagi<br><span :class="bool ? 'yellow' : 'red'">{{bool ? word1 : word2}}</span></p>
+		</span>
+
+		<!-- Button -->
+		<span class="butt">
+			<span class="buttInn" @click="saklar();">
+				<img src="./Assets/images/tombol.png">
+			</span>
+		</span>
+
+	</div>
+
+
+
+
+	<!-- VueJSScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+
+	<!-- MyScript -->
+	<script type="text/javascript">
+		new Vue({
+			el: '#App',
+			data: {
+				bool	: true,
+				imgSrc1	: './Assets/images/lampu_hidup.png',	
+				imgSrc2	: './Assets/images/lampu_mati2.png',	
+				word1	: 'fresh',
+				word2	: 'stress',
+			},
+			methods: {
+				saklar() {
+					this.bool = !this.bool;
+				}	
+			},
+		})
+	</script>
+
+</body>
+</html>
